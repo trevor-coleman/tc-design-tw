@@ -17,17 +17,32 @@
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.6",
     "cssnano": "^5.0.5",
+    "dayjs": "^1.10.5",
+    "js-yaml": "^4.1.0",
+    "mdsvex": "^0.9.7",
     "postcss": "^8.3.0",
     "postcss-load-config": "^3.0.1",
     "postcss-nested": "^5.0.5",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
+    "rehype-highlight": "^4.1.0",
+    "rehype-stringify": "^8.0.0",
+    "remark-frontmatter": "^3.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.1.0",
     "svelte": "^3.34.0",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",
     "tailwindcss": "^2.1.2",
+    "tailwindcss-pseudo-elements": "^2.0.0",
+    "to-vfile": "^7.1.0",
     "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "unified": "^9.2.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1"
+  }
 }

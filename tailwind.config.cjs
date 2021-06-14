@@ -9,51 +9,79 @@ module.exports = {
   },
   purge: {
     content: ['./src/**/*.svelte'],
-    enabled: "production"
+    enabled: "production",
+    options: {
+      safelist: ['bg-postitpink', 'bg-postityellow', 'bg-postitgreen', 'bg-postitblue',
+        'border-postitpink', 'border-postityellow', 'border-postitgreen', 'border-postitblue',
+      ],
+    },
   },
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      },
+    },
+    backgroundColor: {
+      'postitblue': colors.cyan['100'],
+      'postitpink': colors.pink['100'],
+      'postityellow': colors.yellow['100'],
+      'postitgreen': colors.lime['100'],
     },
     extend: {
+      maxWidth: {
+        logoThumb: '10ch'
+      },
       fontFamily: {
         sans: ['proxima-nova', 'sans-serif']
       },
       backgroundColor: {
-        primary: colors.cyan['200'],
+        white: {
+          light: colors.trueGray['50'],
+          dark: colors.trueGray['800'],
+          DEFAULT: colors.trueGray['50']
+        },
+        primary: colors.cyan['100'],
         contrast: {
           light: colors.yellow['100'],
           DEFAULT: colors.yellow['100'],
           dark: colors.yellow['300']
-        }
+        },
+        linklighter: colors.pink[100],
+
       },
       textColor: {
         primary: {
           light: colors.trueGray['800'],
           dark: colors.trueGray['100'],
           DEFAULT: colors.trueGray['800'],
+        },
+        secondary: {
+          light: colors.trueGray['600'],
+          DEFAULT: colors.trueGray['600'],
+          dark: colors.trueGray['300']
         }
       },
+      borderColor: theme => ({
+        ...theme('colors')
+      }),
       colors: {
-        'l-primary': colors.cyan['300'],
-        'l-bg': {
+        'cyan': colors.cyan,
+        'postitblue': colors.cyan['100'],
+        'postitpink': colors.pink['100'],
+        'postityellow': colors.yellow['100'],
+        'postitgreen': colors.lime['100'],
+        'primary': colors.cyan['300'],
+        'bg': {
           dark: colors.trueGray['800'],
           light: colors.trueGray['50'],
           DEFAULT: colors.trueGray['50']
         },
-        'l-contrast':
+        'contrast':
           {
             light: colors.yellow['100'],
             DEFAULT: colors.yellow['100'],
             dark: colors.yellow['300']
           },
+
         'error': colors.red['400'],
         'success': colors.green['400'],
         'disabled': {
@@ -62,14 +90,16 @@ module.exports = {
           DEFAULT: colors.trueGray['400'],
         },
         'link': colors.pink['500'],
-        'link-light': colors.pink['400'],
-        'link-lighter': colors.pink['300'],
-        'link-dark': colors.pink['600'],
-        'link-darker': colors.pink['700'],
+        'linklight': colors.pink['400'],
+        'linklighter': colors.pink['300'],
+        'linkdark': colors.pink['600'],
+        'linkdarker': colors.pink['700'],
       }
     }
   },
   plugins: [
-    require('@tailwindcss/typography')
-  ]
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+  ],
+
 };

@@ -1,38 +1,78 @@
 <script lang="ts">
+  import SoftwareDevelopment
+    from '../components/Sections/SoftwareDevelopment.svelte'
+  import LogoThumb from '../components/LogoThumb.svelte'
+  import Section from '../components/Section.svelte'
+  import Footer from '../components/Footer.svelte'
+  import LaptopIcon from '../icons/LaptopIcon.svelte'
+  import Competencies from '../components/Competencies.svelte'
+  import Hero from '../components/Hero.svelte'
   import { theme } from './store'
   import ToggleTheme from '../components/ToggleTheme.svelte'
+
 </script>
 
 <svelte:head>
   <!-- Primary Meta Tags -->
-  <title>SvelteKit ❤️ Tailwind 2</title>
-  <meta name="title" content="SvelteKit ❤️ Tailwind 2" />
-  <meta name="description" content="SvelteKit and Tailwind 2 toggle dark/light theme demo" />
-  <meta name="keywords" content="Svelte, SvelteKit, Svelte-kit, Tailwind, HTML, CSS, JavaScript" />
-  <meta name="author" content="@dansvel" />
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://metatags.io/" />
-  <meta property="og:title" content="SvelteKit ❤️ Tailwind 2" />
-  <meta property="og:description" content="SvelteKit and Tailwind 2 toggle dark/light theme demo" />
+  <title>Trevor Coleman</title>
   <meta
-    property="og:image"
-    content="https://sveltekit-tailwind2.netlify.app/screenshot.png"
-  />
+    name='title'
+    content='Trevor Coleman'>
+  <meta
+    name='description'
+    content='Successful Founder • Facilitative Leader • Full-Stack Developer
+
+'>
+
+  <!-- Open Graph / Facebook -->
+  <meta
+    property='og:type'
+    content='website'>
+  <meta
+    property='og:url'
+    content='https://trevorcoleman.design/'>
+  <meta
+    property='og:title'
+    content='Trevor Coleman'>
+  <meta
+    property='og:description'
+    content='Successful Founder • Facilitative Leader • Full-Stack Developer
+
+'>
+  <meta
+    property='og:image'
+    content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'>
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://metatags.io/" />
-  <meta property="twitter:title" content="SvelteKit ❤️ Tailwind 2" />
   <meta
-    property="twitter:description"
-    content="SvelteKit and Tailwind 2 toggle dark/light theme demo"
-  />
+    property='twitter:card'
+    content='summary_large_image'>
   <meta
-    property="twitter:image"
-    content="https://sveltekit-tailwind2.netlify.app/screenshot.png"
-  />
+    property='twitter:url'
+    content='https://trevorcoleman.design/'>
+  <meta
+    property='twitter:title'
+    content='Trevor Coleman'>
+  <meta
+    property='twitter:description'
+    content='Successful Founder • Facilitative Leader • Full-Stack Developer
+
+'>
+  <meta
+    property='twitter:image'
+    content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'>
 </svelte:head>
+
+<main class='container p-4'>
+<Hero/>
+<Competencies/>
+  <SoftwareDevelopment/>
+  <Section topSlope={10} bottomSlope={10} bgcolor='pink'
+           title='Collaborative Design'></Section>
+  <Section topSlope={-10} bottomSlope={-10} bgcolor='green'
+           title='Advising / Mentoring'></Section>
+</main>
+<Footer/>
 
 <style lang="postcss">
 

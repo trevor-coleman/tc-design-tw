@@ -27,6 +27,9 @@ module.exports = {
       'postitgreen': colors.lime['100'],
     },
     extend: {
+      screens: {
+        'xs': '440px'
+      },
       maxWidth: {
         logoThumb: '10ch'
       },

@@ -5,6 +5,7 @@
   export let bottomSlope: number;
   export let bgcolor: PostItColor;
   export let title: string;
+  export let description: string;
 
   topSlope = topSlope??10;
   bottomSlope = bottomSlope??10;
@@ -33,7 +34,7 @@
 </script>
 
 <section
-  class='{colorClass} relative mt-0 max-w-[90%] mx-auto'
+  class='{colorClass} relative mt-0 max-w-[90%] mx-auto min-w-min'
   style='padding-top: {Math.abs(topSlope)}vh'>
   {#if topSlope>0} <svg
     class='absolute top-[0vh] w-full'
@@ -61,10 +62,15 @@
     </svg>
   {/if}
   <div
-    class='relative px-8 pb-8 top-0 left-0 mx-auto flex flex-col min-h-[150px] -mt-4'>
+    class='relative px-4 pb-12 top-0 left-0 mx-auto flex flex-col min-h-[150px] md:-mt-12'>
     <div
       class='text-2xl font-bold {topSlope > 0 ? "text-right": "" } pr-4 sm:pr-2'>
       {title}
+    </div>
+    <div class='w-full flex flex-col {topSlope > 0 ? "items-end":""}'>
+      <div class='{topSlope > 0 ? "text-right":""} sm:max-w-[30ch]'>
+      {description}
+    </div>
     </div>
     <div>
       <slot/>

@@ -1,4 +1,8 @@
 <script lang="ts">
+  import AdvisingMentoring
+    from '../components/Sections/AdvisingMentoring.svelte'
+  import CollaborativeDesign
+    from '../components/Sections/CollaborativeDesign.svelte'
   import SoftwareDevelopment
     from '../components/Sections/SoftwareDevelopment.svelte'
   import LogoThumb from '../components/LogoThumb.svelte'
@@ -67,10 +71,8 @@
 <Hero/>
 <Competencies/>
   <SoftwareDevelopment/>
-  <Section topSlope={10} bottomSlope={10} bgcolor='pink'
-           title='Collaborative Design'></Section>
-  <Section topSlope={-10} bottomSlope={-10} bgcolor='green'
-           title='Advising / Mentoring'></Section>
+  <CollaborativeDesign/>
+  <AdvisingMentoring/>
 </main>
 <Footer/>
 

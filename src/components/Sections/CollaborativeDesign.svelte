@@ -1,4 +1,5 @@
 <script lang='ts'>
+  import LogoBubbles from '../LogoBubbles.svelte'
   import LogoThumb from '../LogoThumb.svelte'
   import Section from '../Section.svelte'
   import type { IconList } from '../../global'
@@ -34,15 +35,7 @@
   bgcolor='pink'
   title='Collaborative Design'
   description="I'm an expert facilitator, and I bring that skill to all the work I do.">
-<div class='mx-auto my-8 flex flex-wrap flex-row-reverse w-full pt-12'>
-  {#each icons as icon}
-    <div class='relative even:-top-12 even:sm:top-0'>
-  <LogoThumb
-    src='{icon.src}'
-    caption='{icon.caption}' />
-    </div>
-  {/each}
-</div>
+  <LogoBubbles icons={icons} tilt='right' />
 </Section>
 
 <style>

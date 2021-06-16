@@ -1,4 +1,5 @@
 <script lang='ts'>
+  import LogoBubbles from '../LogoBubbles.svelte'
   import LogoThumb from '../LogoThumb.svelte'
   import Section from '../Section.svelte'
   import type { IconList } from '../../global'
@@ -47,17 +48,7 @@
   title='Software Development'
   description="I'm passionate about writing clean, performant, maintainable code."
 >
-<div
-  class='my-8 flex flex-wrap content-around border min-w-[16rem]'>
-  {#each icons as icon}
-    <div
-      class='flex flex-grow justify-center relative even:top-12 sm:even:top-0 border'>
-    <LogoThumb
-    src='{icon.src}'
-    caption='{icon.caption}' />
-    </div>
-  {/each}
-</div>
+<LogoBubbles icons={icons} tilt='"left'/>
 </Section>
 
 <style>

@@ -1,6 +1,5 @@
 import preprocess from 'svelte-preprocess'
 import ssr from '@sveltejs/adapter-static'
-import { mdsvex } from 'mdsvex'
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -16,6 +15,6 @@ export default {
   ],
   kit: {
     adapter: ssr(),
-    target: '#svelte'
+    target: '#svelte' 
   }
 }

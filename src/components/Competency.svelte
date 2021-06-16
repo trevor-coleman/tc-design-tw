@@ -1,6 +1,6 @@
 <script lang='ts'>
   import { SvelteComponent } from 'svelte'
-  import type { ImageSource, PostItColor } from '../global'
+  import type { PostItColor } from '../global'
   import LogoThumb from './LogoThumb.svelte'
 
   export type IconList = { caption: string, src: string }[]
@@ -11,6 +11,7 @@
   export let icons: IconList
   export let heroIcon: SvelteComponent;
   let colorClass = 'border-postityellow'
+  // noinspection JSUnusedAssignment
   switch (color) {
     case 'blue':
       colorClass = 'border-postitblue'
@@ -49,7 +50,7 @@
       {#if icons}
         <div class='flex flex-wrap w-full'>
         {#each icons as icon}
-        <LogoThumb src='{icon.src}'>{icon.caption}</LogoThumb>
+        <LogoThumb src='{icon.src}' caption={icon.caption}>{icon.caption}</LogoThumb>
       {/each}
         </div>
       {/if}

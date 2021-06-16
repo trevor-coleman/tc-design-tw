@@ -1,26 +1,38 @@
 <script lang='ts'>
   import LogoBubbles from '../LogoBubbles.svelte'
   import type { IconList } from '../../global'
-  import LogoThumb from '../LogoThumb.svelte'
   import Section from '../Section.svelte'
 
   const icons: IconList = [
     {
-      src    : 'https://via.placeholder.com/150',
+      src    : '/stars-icon.svg',
       caption: 'Value Proposition Design'
     }, {
-      src    : 'https://via.placeholder.com/150',
+      src    : '/pitch-deck-icon.svg',
       caption: 'Pitch Deck Development'
     }, {
-      src    : 'https://via.placeholder.com/150',
-      caption: 'Business Strategy'
+      src    : '/business-icon.svg',
+      caption: 'Business Models'
     }, {
-      src    : 'https://via.placeholder.com/150',
+      src    : '/patent-icon.svg',
       caption: 'Intellectual Property'
     }, {
-      src    : 'https://via.placeholder.com/150',
-      caption: 'This'
+      src    : '/cash-icon.svg',
+      caption: 'Fundraising'
+    }, {
+      src    : '/conversation-icon.svg',
+      caption: 'Founder Issues'
+    }, {
+      src    : '/meeting-icon.svg',
+      caption: 'Governance'
+    }, {
+      src    : '/market-icon.svg',
+      caption: 'Market Sizing'
+    }, {
+      src    : '/spreadsheet-icon.svg',
+      caption: 'Financial Modelling'
     }
+
   ]
 
 
@@ -32,7 +44,7 @@
   bgcolor='green'
   title='Advising / Mentoring' description='I give back by sharing the experience I gained as a founder.'
 >
-  <LogoBubbles icons={icons} tilt='left' />
+  <LogoBubbles icons={icons} tilt='left' bubbleClass='' />
 </Section>
 
 <style>

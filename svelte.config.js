@@ -5,7 +5,6 @@ import ssr from '@sveltejs/adapter-static'
 export default {
   extensions: [".svelte", ".svx", ".md"],
   preprocess: [
-    mdsvex(),
     preprocess({
       defaults: {
         style: 'postcss'
@@ -15,6 +14,6 @@ export default {
   ],
   kit: {
     adapter: ssr(),
-    target: '#svelte' 
+    target: '#svelte'
   }
 }

@@ -62,16 +62,17 @@
     </svg>
   {/if}
   <div
-    class='relative px-12 pt-4 pb-12 top-0 left-0 mx-auto flex flex-col min-h-[150px] md:-mt-12'>
+    class='relative px-12 pt-4 top-0 left-0 mx-auto flex flex-col min-h-[150px] md:-mt-12'>
     <!--    TITLE    -->
     <div
       class='text-2xl font-bold {topSlope > 0 ? "text-right": "" } sm:pr-2'>
       {title}
     </div>
     <!--    DESCRIPTION    -->
-    <div class='w-full flex flex-col {topSlope > 0 ? "items-end":""}'>
+    <div class='w-full flex flex-col {topSlope > 0 ? "items-end":""}'
+         style='padding-bottom: {Math.abs(1.5 * topSlope)}vh; '>
       <div
-        class='{topSlope > 0 ? "text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full'>
+        class='{topSlope > 0 ? "text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full py-4'>
         {description}
       </div>
       <!--   SLOT   -->

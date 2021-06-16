@@ -12,7 +12,7 @@
 
   <div class='w-full flex flex-col items-center'>
     <div
-    class='w-[16rem] sm:w-full mt-2 mb-20 flex flex-wrap {tilt==="right" ?
+    class='w-[16rem] sm:w-full mt-2 flex flex-wrap {tilt==="right" ?
     "sm:justify-end":"sm:justify-start"}'>
     {#each icons as icon}
       <div

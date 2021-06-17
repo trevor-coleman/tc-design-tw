@@ -1,4 +1,6 @@
 <script lang="ts">
+  import IconButton from '../components/IconButton.svelte'
+  import LogoBubbles from '../components/LogoBubbles.svelte'
   import AdvisingMentoring
     from '../components/Sections/AdvisingMentoring.svelte'
   import CollaborativeDesign
@@ -6,7 +8,7 @@
   import SoftwareDevelopment
     from '../components/Sections/SoftwareDevelopment.svelte'
   import LogoThumb from '../components/LogoThumb.svelte'
-  import Section from '../components/Section.svelte'
+  import Section from '../components/Sections/Section.svelte'
   import Footer from '../components/Footer.svelte'
   import LaptopIcon from '../icons/LaptopIcon.svelte'
   import Competencies from '../components/Competencies.svelte'
@@ -67,13 +69,22 @@
     content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'>
 </svelte:head>
 
-<main class='container p-4'>
+<div class='pt-20'/>
 <Hero/>
 <Competencies/>
   <SoftwareDevelopment/>
   <CollaborativeDesign/>
   <AdvisingMentoring/>
-</main>
+
+  <Section bgcolor='blue' title='Get In Touch'
+           description="I'd love to hear from you!" bottomSlope={0}>
+    <div class='flex flex-row w-full items-end justify-end'>
+      <IconButton icon='/twitter-icon.svg' alt='Twitter'/>
+      <IconButton icon='/github-icon.svg' alt='GitHub'/>
+      <IconButton icon='/linkedin-icon.svg' alt='LinkedIn'/>
+    </div>
+
+  </Section>
 <Footer/>
 
 <style lang="postcss">

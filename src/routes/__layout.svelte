@@ -13,7 +13,7 @@
   })
 </script>
 
-<Header/>
-<main class='container'>
+<Header class='max-h-[4rem] min-h-[4rem]'/>
+<main class='container min-w-min'>
   <slot />
 </main>

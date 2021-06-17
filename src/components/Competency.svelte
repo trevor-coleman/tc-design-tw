@@ -5,6 +5,7 @@
 
   export type IconList = { caption: string, src: string }[]
 
+  export let slug: string
   export let color: PostItColor
   export let title: string
   export let description: string
@@ -54,10 +55,12 @@
       {/each}
         </div>
       {/if}
-      <div class='w-full flex justify-center '>
-        <button
-          class='place-self-center text-link border border-link py-2 px-4 rounded-md shadow-md hover:bg-linklighter hover:text-linkdarker hover:border-linkdark focus:border-linkdarker focus:bg-linklighter'>Explore
-                                                           >></button></div>
+<!--      <div class='w-full flex justify-center '>-->
+<!--        <a href='#{slug}'-->
+<!--          class='place-self-center text-link border border-link py-2 px-4 rounded-md shadow-md hover:bg-linklighter hover:text-linkdarker hover:border-linkdark focus:border-linkdarker focus:bg-linklighter'>Explore-->
+<!--                                                           >>-->
+<!--        </a>-->
+<!--      </div>-->
     </div>
 
 </div>

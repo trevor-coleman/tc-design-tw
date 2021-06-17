@@ -1,7 +1,7 @@
 <script lang='ts'>
   import LogoBubbles from '../LogoBubbles.svelte'
   import type { IconList } from '../../global'
-  import Section from '../Section.svelte'
+  import Section from './Section.svelte'
 
   const icons: IconList = [
     {
@@ -37,7 +37,7 @@
 
 
 </script>
-
+<a id='advising-mentoring' />
 <Section
   topSlope={-10}
   bottomSlope={-10}

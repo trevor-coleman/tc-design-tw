@@ -2,11 +2,14 @@
 
 </script>
 
-<header>
+<header
+  class='fixed w-full border-2 h-18 z-10 top-0'>
   <!--Nav-->
-  <nav class='p-2 mt-0 w-full'>
+  <nav
+    class='mt-0 mx-auto items-center md:mb-0'>
     <!-- Add this to make the nav fixed: "fixed z-10 top-0" -->
-    <div class='container mx-auto flex flex-wrap items-center'>
+    <div
+      class='bg-white shadow-md mx-auto flex flex-wrap items-center p-2'>
       <div
         class='flex w-full md:w-1/2 justify-center md:justify-start font-bold'>
         <a
@@ -14,37 +17,37 @@
           href='#'>
           <img src="headshot-profile.png"
                class='rounded-full object-cover h-12 w-12' >
-          <span class='text-2xl pl-2 place-self-center'>Trevor Coleman
-          </span>
+          <div class='text-2xl flex-grow pl-2 place-self-center'>Trevor Coleman
+          </div>
         </a>
       </div>
-      <div class='flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end'>
+      <div
+        class='hidden sm:block flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end'>
         <ul class='list-reset flex justify-between flex-1 md:flex-none items-center'>
           <li class='mr-3'>
             <a
-              class='inline-block py-2 px-4 no-underline'
-              href='#'>Active</a>
+              class='inline-block py-2 px-4 no-underline font-medium'
+              href='/'>Home</a>
           </li>
           <li class='mr-3'>
             <a
               class='inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4'
-              href='#'>link</a>
+              href='#software-development'>Development</a>
           </li>
           <li class='mr-3'>
             <a
               class='inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4'
-              href='#'>link</a>
+              href='#collaborative-design'>Design</a>
           </li>
           <li class='mr-3'>
             <a
               class='inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4'
-              href='#'>link</a>
+              href='#advising-mentoring'>Mentoring</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
 </header>
 
 <style>

@@ -20,13 +20,16 @@ module.exports = {
     container: {
       center: true,
     },
-    backgroundColor: {
-      'postitblue': colors.cyan['100'],
-      'postitpink': colors.pink['100'],
-      'postityellow': colors.yellow['100'],
-      'postitgreen': colors.lime['100'],
-    },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: "500"
+            }
+          }
+        }
+      },
       screens: {
         'xs': '440px'
       },
@@ -36,7 +39,12 @@ module.exports = {
       fontFamily: {
         sans: ['proxima-nova', 'sans-serif']
       },
-      backgroundColor: {
+      backgroundColor: (theme) => ({
+        ...theme('colors'),
+        'postitblue': colors.cyan['100'],
+        'postitpink': colors.pink['100'],
+        'postityellow': colors.yellow['100'],
+        'postitgreen': colors.lime['100'],
         white: {
           light: colors.trueGray['50'],
           dark: colors.trueGray['800'],
@@ -50,7 +58,7 @@ module.exports = {
         },
         linklighter: colors.pink[100],
 
-      },
+      }),
       textColor: {
         primary: {
           light: colors.trueGray['800'],

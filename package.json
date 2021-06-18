@@ -1,6 +1,6 @@
 {
-  "name": "sveltekit-typescript-postcss-tailwind2",
-  "version": "0.0.4",
+  "name": "tc-design-tw",
+  "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "host": "svelte-kit dev --host",
@@ -44,6 +44,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.1"
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@types/marked": "^2.0.3",
+    "front-matter": "^4.0.2",
+    "marked": "^2.1.1"
   }
 }

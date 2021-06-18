@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/trevorcoleman/.nvm/versions/node/v14.16.1/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js dev
+  /Users/trevorcoleman/.nvm/versions/node/v14.16.1/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add front-matter @types/front-matter
 
 PATH: 
   /usr/local/Cellar/pyenv-virtualenv/1.1.5/shims:/Users/trevorcoleman/.pyenv/shims:/Users/trevorcoleman/google-cloud-sdk/bin://anaconda/bin:/Users/trevorcoleman/miniconda2/bin:/Users/trevorcoleman/.nvm/versions/node/v14.16.1/bin:/Users/trevorcoleman/.zplug/bin:/Users/trevorcoleman/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/trevorcoleman/.dotnet/tools:~/Library/Application Support/JetBrains/Toolbox/apps:/Library/PostgreSQL/13/bin:/usr/local/opt/fzf/bin
@@ -14,19 +14,25 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/trevorcoleman/dev/tc-design-tw/package.json: Unexpected token } in JSON at position 1392
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
-      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@types%2ffront-matter: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:140749:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:141721:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:141643:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
-    "name": "sveltekit-typescript-postcss-tailwind2",
-    "version": "0.0.4",
+    "name": "tc-design-tw",
+    "version": "0.0.1",
     "scripts": {
       "dev": "svelte-kit dev",
+      "host": "svelte-kit dev --host",
       "build": "svelte-kit build",
       "preview": "svelte-kit preview",
       "check": "svelte-check --tsconfig ./tsconfig.json",
@@ -59,11 +65,18 @@ npm manifest:
       "svelte-check": "^2.0.0",
       "svelte-preprocess": "^4.0.0",
       "tailwindcss": "^2.1.2",
+      "tailwindcss-pseudo-elements": "^2.0.0",
       "to-vfile": "^7.1.0",
       "tslib": "^2.0.0",
       "typescript": "^4.0.0",
       "unified": "^9.2.1"
     },
+    "type": "module",
+    "dependencies": {
+      "@tailwindcss/aspect-ratio": "^0.2.1",
+      "@types/marked": "^2.0.3",
+      "marked": "^2.1.1"
+    }
   }
 
 yarn manifest: 
@@ -157,6 +170,11 @@ Lockfile:
       require-relative "^0.8.7"
       svelte-hmr "^0.14.4"
   
+  "@tailwindcss/aspect-ratio@^0.2.1":
+    version "0.2.1"
+    resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.2.1.tgz#a7ce776688b8218d9559a6918f0bccc58f0f16dd"
+    integrity sha512-aDFi80aHQ3JM3symJ5iKU70lm151ugIGFCI0yRZGpyjgQSDS+Fbe93QwypC1tCEllQE8p0S7TUu20ih1b9IKLA==
+  
   "@tailwindcss/typography@^0.4.1":
     version "0.4.1"
     resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.4.1.tgz#51ddbceea6a0ee9902c649dbe58871c81a831212"
@@ -171,6 +189,11 @@ Lockfile:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.1.1.tgz#3348564048e7a2d7398c935d466c0414ebb6a669"
     integrity sha512-Z6DoceYb/1xSg5+e+ZlPZ9v0N16ZvZ+wYMraFue4HYrE4ttONKtsvruIRf6t9TBR0YvSOfi1hUU0fJfBLCDYow==
+  
+  "@types/marked@^2.0.3":
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/@types/marked/-/marked-2.0.3.tgz#c8ea93684e530cc3b667d3e7226556dd0844ad1f"
+    integrity sha512-lbhSN1rht/tQ+dSWxawCzGgTfxe9DB31iLgiT1ZVT5lshpam/nyOA1m3tKHRoNPctB2ukSL22JZI5Fr+WI/zYg==
   
   "@types/mdast@^3.0.0":
     version "3.0.3"
@@ -1174,6 +1197,11 @@ Lockfile:
     dependencies:
       repeat-string "^1.0.0"
   
+  marked@^2.1.1:
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/marked/-/marked-2.1.1.tgz#b7c27f520fc4de0ddd049d9b4be3b04e06314923"
+    integrity sha512-5XFS69o9CzDpQDSpUYC+AN2xvq8yl1EGa5SG/GI1hP78/uTeo3PDfiDNmsUyiahpyhToDDJhQk7fNtJsga+KVw==
+  
   mdast-util-definitions@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz#c5c1a84db799173b4dcf7643cda999e440c24db2"
@@ -2099,6 +2127,11 @@ Lockfile:
       css-tree "^1.1.2"
       csso "^4.2.0"
       stable "^0.1.8"
+  
+  tailwindcss-pseudo-elements@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/tailwindcss-pseudo-elements/-/tailwindcss-pseudo-elements-2.0.0.tgz#778a29b9aafeef89fe2e22efe047ae56822627a3"
+    integrity sha512-cbnF8Rg1tJjsgrUK1sLt/TNAea9zKNhWGTI5NtKxZ8WhYjHCMAGOjaHg+iql8UlXaW1U9jPeyJsGlQsLGrbomQ==
   
   tailwindcss@^2.1.2:
     version "2.1.4"

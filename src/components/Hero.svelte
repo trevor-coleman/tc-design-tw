@@ -1,4 +1,5 @@
 <script lang='ts'>
+  import SocialButtons from './SocialButtons.svelte'
   import IconButton from './IconButton.svelte'
 
 </script>
@@ -18,21 +19,7 @@
                                    brain to help people make better decisions
                                    faster and get more done.</p>
     <div class='flex flex-row flex-wrap w-full justify-start'>
-      <IconButton
-        icon='twitter-icon.svg'
-        alt='Twitter'
-        href='https://www.twitter.com/trevorcoleman'
-      />
-      <IconButton
-        icon='github-icon.svg'
-        alt='GitHub'
-        href='https://www.github.com/trevor-coleman'
-      />
-      <IconButton
-        icon='linkedin-icon.svg'
-        alt='LinkedIn'
-        href='https://www.linkedin.com/in/trevor-coleman-toronto/'
-      />
+      <SocialButtons/>
     </div>
 <!--    <button class='bg-transparent hover:bg-black text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-black hover:border-transparent'>-->
 <!--      Super Button-->

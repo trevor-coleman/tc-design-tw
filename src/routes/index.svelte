@@ -28,12 +28,7 @@
   <Section bgcolor='blue' title='Get In Touch'
            description="I'd love to hear from you!" bottomSlope={0}>
     <div class='flex flex-row w-full items-end justify-end'>
-      <IconButton icon='twitter-icon.svg' alt='Twitter'
-                  href='https://www.twitter.com/trevorcoleman'/>
-      <IconButton icon='github-icon.svg' alt='GitHub'
-                  href='https://www.github.com/trevor-coleman'/>
-      <IconButton icon='linkedin-icon.svg' alt='LinkedIn'
-                  href='https://www.linkedin.com/in/trevor-coleman-toronto/'/>
+      <SocialButtons/>
     </div>
 
   </Section>

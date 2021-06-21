@@ -19,7 +19,7 @@
                                    faster and get more done.</p>
     <div class='flex flex-row flex-wrap w-full justify-start'>
       <IconButton
-        icon='/twitter-icon.svg'
+        icon='/static/twitter-icon.svg'
         alt='Twitter'
         href='https://www.twitter.com/trevorcoleman'
       />

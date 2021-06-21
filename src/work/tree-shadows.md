@@ -8,6 +8,7 @@ tags:
     - Typescript
     - dotnet Core
     - MongoDB
+category: development
 ---
 
 I made tree-shadows.

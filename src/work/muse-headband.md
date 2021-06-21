@@ -7,6 +7,7 @@ tags:
     - Product Management
     - UX
     - Design
+category: other
 ---
 
 Muse: the brain sensing headband

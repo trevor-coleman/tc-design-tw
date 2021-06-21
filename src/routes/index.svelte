@@ -18,9 +18,6 @@
 
 </script>
 
-
-
-
 <div/>
 <Hero/>
 <Competencies/>

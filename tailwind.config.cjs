@@ -31,7 +31,10 @@ module.exports = {
         }
       },
       screens: {
-        'xs': '440px'
+        'xs': {
+          min: '440px',
+          max: '639px'
+        }
       },
       maxWidth: {
         logoThumb: '10ch'

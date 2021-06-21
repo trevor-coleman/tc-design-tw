@@ -5,7 +5,7 @@
 </script>
 <!--Hero-->
 <div
-  class='border-[12px] border-postitblue md:max-w-[80%] p-4 mx-auto flex flex-col-reverse md:flex-row items-center mb-12 md:mb-24'>
+  class='border-[12px] border-postitblue md:max-w-[80%] p-4 mx-4 sm:mx-auto flex flex-col-reverse md:flex-row items-center mb-12 md:mb-24'>
   <!--Left Col-->
 
   <div

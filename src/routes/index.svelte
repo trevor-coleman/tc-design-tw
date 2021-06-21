@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SectionTitle from '../components/SectionTitle.svelte'
   import SocialButtons from '../components/SocialButtons.svelte'
   import IconButton from '../components/IconButton.svelte'
   import LogoBubbles from '../components/LogoBubbles.svelte'

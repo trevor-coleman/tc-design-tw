@@ -20,13 +20,19 @@
     <div class='flex flex-row flex-wrap w-full justify-start'>
       <IconButton
         icon='/twitter-icon.svg'
-        alt='Twitter' />
+        alt='Twitter'
+        href='https://www.twitter.com/trevorcoleman'
+      />
       <IconButton
         icon='/github-icon.svg'
-        alt='GitHub' />
+        alt='GitHub'
+        href='https://www.github.com/trevor-coleman'
+      />
       <IconButton
         icon='/linkedin-icon.svg'
-        alt='LinkedIn' />
+        alt='LinkedIn'
+        href='https://www.linkedin.com/in/trevor-coleman-toronto/'
+      />
     </div>
 <!--    <button class='bg-transparent hover:bg-black text-black hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-black hover:border-transparent'>-->
 <!--      Super Button-->

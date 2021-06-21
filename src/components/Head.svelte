@@ -6,9 +6,7 @@
     content='Trevor Coleman'>
   <meta
     name='description'
-    content='Successful Founder • Facilitative Leader • Full-Stack Developer
-
-'>
+    content="I'm a developer and designer who uses my understanding of technology and the human brain to help people make better decisions faster and get more done.">
 
   <!-- Open Graph / Facebook -->
   <meta
@@ -22,12 +20,13 @@
     content='Trevor Coleman'>
   <meta
     property='og:description'
-    content='Successful Founder • Facilitative Leader • Full-Stack Developer
+    content="I'm a developer and designer who uses my understanding of technology and the human brain to help people make better decisions faster and get more done.">
 
-'>
+
+  '>
   <meta
     property='og:image'
-    content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'>
+    content='https://www.trevorcoleman.design/meta-preview.png'>
 
   <!-- Twitter -->
   <meta
@@ -41,10 +40,11 @@
     content='Trevor Coleman'>
   <meta
     property='twitter:description'
-    content='Successful Founder • Facilitative Leader • Full-Stack Developer
+    content="I'm a developer and designer who uses my understanding of technology and the human brain to help people make better decisions faster and get more done.">
 
-'>
+
+  '>
   <meta
     property='twitter:image'
-    content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'>
+    content='https://www.trevorcoleman.design/meta-preview.png'>
 </svelte:head>

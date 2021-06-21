@@ -33,7 +33,7 @@
 <div
   class='w-full h-full flex flex-col  align-middle justify-center'>
   <div
-    class='border-[12px] p-4 lg:p-3 xl:p-4 flex flex-col {colorClass} flex-grow max-w-xs shadow-lg place-self-center'>
+    class='border-[12px] p-4 lg:p-3 xl:p-4 flex flex-col {colorClass} flex-grow max-w-xs place-self-center'>
     <h3
       class='place-self-center md:text-lg text-center lg:text-xl font-medium'>{title}</h3>
     {#if heroIcon}

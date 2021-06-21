@@ -2,7 +2,6 @@ import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 import ssr from '@sveltejs/adapter-static'
 /** @type {import('@sveltejs/kit').Config} */
-import node from '@sveltejs/adapter-vercel';
 export default {
   extensions: ['.svelte', '.svx', '.md'],
   preprocess: [

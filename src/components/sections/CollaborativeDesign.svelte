@@ -11,17 +11,14 @@
       src    : '/room-service-icon.svg',
       caption: 'Service Design'
     }, {
-      src    : '/flowchart-icon.svg',
-      caption: 'Systems Thinking'
-    }, {
       src    : '/binoculars-icon.svg',
       caption: 'Strategic Foresight'
     }, {
+      src    : '/flowchart-icon.svg',
+      caption: 'Systems Thinking'
+    }, {
       src    : '/march-icon.svg',
       caption: 'Design Facilitation'
-    }, {
-      src    : '/visual-thinking-icon.svg',
-      caption: 'Visual Thinking'
     }, {
       src    : '/prototyping-icon.svg',
       caption: 'Rapid Prototyping'

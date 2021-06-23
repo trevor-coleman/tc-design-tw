@@ -14,16 +14,13 @@
     content='website'>
   <meta
     property='og:url'
-    content='https://trevorcoleman.design/'>
+    content='https://www.trevorcoleman.design/'>
   <meta
     property='og:title'
     content='Trevor Coleman'>
   <meta
     property='og:description'
     content="I'm a developer and designer who uses my understanding of technology and the human brain to help people make better decisions faster and get more done.">
-
-
-  '>
   <meta
     property='og:image'
     content='https://www.trevorcoleman.design/meta-preview.png'>
@@ -34,16 +31,13 @@
     content='summary_large_image'>
   <meta
     property='twitter:url'
-    content='https://trevorcoleman.design/'>
+    content='https://www.trevorcoleman.design/'>
   <meta
     property='twitter:title'
     content='Trevor Coleman'>
   <meta
     property='twitter:description'
     content="I'm a developer and designer who uses my understanding of technology and the human brain to help people make better decisions faster and get more done.">
-
-
-  '>
   <meta
     property='twitter:image'
     content='https://www.trevorcoleman.design/meta-preview.png'>

@@ -5,11 +5,10 @@
 
   export type IconList = { caption: string, src: string }[]
 
-  export let slug: string
+  export let slug: string | undefined
   export let color: PostItColor
   export let title: string
   export let description: string
-  export let icons: IconList
   export let heroIcon: SvelteComponent;
   let colorClass = 'border-postityellow'
   // noinspection JSUnusedAssignment
@@ -47,20 +46,6 @@
         class='place-self-center my-auto text-center text-secondary font-light'>{description}</div>
       </div>
     {/if}
-
-      {#if icons}
-        <div class='flex flex-wrap w-full'>
-        {#each icons as icon}
-        <LogoThumb src='{icon.src}' caption={icon.caption}>{icon.caption}</LogoThumb>
-      {/each}
-        </div>
-      {/if}
-<!--      <div class='w-full flex justify-center '>-->
-<!--        <a href='#{slug}'-->
-<!--          class='place-self-center text-link border border-link py-2 px-4 rounded-md shadow-md hover:bg-linklighter hover:text-linkdarker hover:border-linkdark focus:border-linkdarker focus:bg-linklighter'>Explore-->
-<!--                                                           >>-->
-<!--        </a>-->
-<!--      </div>-->
     </div>
 
 </div>

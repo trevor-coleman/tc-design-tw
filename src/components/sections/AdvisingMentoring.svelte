@@ -44,7 +44,7 @@
   bgcolor='green'
   title='Advising / Mentoring' description='I give back by sharing the experience I gained as a founder.'
 >
-  <LogoBubbles icons={icons} tilt='left' bubbleClass='' />
+  <LogoBubbles icons={icons} tilt='left' />
 </Section>
 
 <style>

@@ -2,9 +2,9 @@
   export let tw;
 
 </script>
-
+<div class='h-12 mb-4'>
 <header
-  class='fixed w-full border-2 h-18 z-10 top-0 {tw??""}'>
+  class='fixed w-full z-10 top-0 h-12'>
   <!--Nav-->
   <nav
     class='mt-0 mx-auto items-center md:mb-0'>
@@ -17,7 +17,7 @@
           class='no-underline hover:no-underline flex flex-row'
           href='#'>
           <img src="/headshot-profile.png"
-               class='rounded-full object-cover h-12 w-12' >
+               class='rounded-full object-cover h-8 w-8' >
           <div class='text-2xl flex-grow pl-2 place-self-center'>Trevor Coleman
           </div>
         </a>
@@ -25,6 +25,7 @@
     </div>
   </nav>
 </header>
+</div>
 
 <style>
 

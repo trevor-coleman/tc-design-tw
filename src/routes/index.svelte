@@ -1,5 +1,4 @@
 <script lang="ts">
-  import SectionTitle from '../components/SectionTitle.svelte'
   import SocialButtons from '../components/SocialButtons.svelte'
   import IconButton from '../components/IconButton.svelte'
   import LogoBubbles from '../components/LogoBubbles.svelte'
@@ -20,6 +19,9 @@
 
 </script>
 
+
+
+
 <div/>
 <Hero/>
 <Competencies/>
@@ -27,13 +29,7 @@
   <CollaborativeDesign/>
   <AdvisingMentoring/>
 
-  <Section bgcolor='blue' title='Get In Touch'
-           description="I'd love to hear from you!" bottomSlope={0}>
-    <div class='flex flex-row w-full items-end justify-end'>
-      <SocialButtons/>
-    </div>
 
-  </Section>
 <Footer/>
 
 <style lang="postcss">

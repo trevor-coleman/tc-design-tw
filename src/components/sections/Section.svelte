@@ -29,8 +29,21 @@
       break
   }
 
+function offsetAnchor(e) {
+  console.log(e, location)
+  if (e.currentTarget.location.hash.length !== 0) {
+  window.scrollTo(window.scrollX, window.scrollY - 75);
+}
+}
+
+  console.log("--->", topSlope, bottomSlope);
 
 </script>
+
+<svelte:window
+  on:hashchange={offsetAnchor}
+/>
+
 
 <section
   class='{colorClass} relative mt-0 max-w-[100%] mx-auto'
@@ -62,23 +75,30 @@
     </svg>
   {/if}
   <div
-    class='relative px-12 pt-4 top-0 left-0 mx-auto flex flex-col min-h-[150px] sm:-mt-4'>
+    style='height: {Math.round(Math.abs(0.3 * topSlope))}vh;'></div>
+  <div
+    class='relative px-12 top-0 left-0 mx-auto flex flex-col sm:-mt-4'>
     <!--    TITLE    -->
     <div
       class='text-2xl font-bold {topSlope > 0 ? "sm:text-right": "" } sm:pr-2'>
       {title}
     </div>
+    {#if description}
     <!--    DESCRIPTION    -->
-    <div class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'
-         style='padding-bottom: {Math.abs(1.5 * topSlope)}vh; '>
-      <div
+      <div class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'
+         style='padding-bottom:{Math.abs(1.5 * topSlope)}vh;'>
+
+        <div
         class='{topSlope > 0 ? "sm:text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full py-4'>
         {description}
       </div>
+
       <!--   SLOT   -->
       <slot />
     </div>
+    {/if}
   </div>
+  <div class='mt-2' style='height: {Math.abs(bottomSlope)}vh;'></div>
   {#if bottomSlope > 0}
     <svg
       class='absolute bottom-[0vh] w-full'
@@ -106,7 +126,6 @@
 
 
 </section>
-
 
 <style>
 

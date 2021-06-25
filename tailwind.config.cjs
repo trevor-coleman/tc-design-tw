@@ -28,7 +28,22 @@ module.exports = {
               fontWeight: "500"
             }
           }
-        }
+        },
+        'wp': {
+          css: {
+            fontSize: '0.85rem',
+            lineHeight: '1rem',
+            h1: {
+              fontSize: '4rem',
+              fontWeight: '100',
+            },
+            a: {
+             color: colors.pink['500'],
+            }
+            // ...
+          },
+        },
+
       },
       screens: {
         'xs': {

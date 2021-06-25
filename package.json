@@ -47,6 +47,7 @@
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@types/marked": "^2.0.3",
     "front-matter": "^4.0.2",
-    "marked": "^2.1.1"
+    "marked": "^2.1.1",
+    "svelte-carousel": "^1.0.7"
   }
 }

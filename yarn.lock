@@ -64,13 +64,6 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.13.tgz#5cba8f2905a5a7b956c2663d73ac02f7eb6da7c4"
   integrity sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==
 
-"@sveltejs/adapter-vercel@next":
-  version "1.0.0-next.22"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.22.tgz#b6f237b696b128580aede6bb78973b1d649608c7"
-  integrity sha512-C9JL/4/CQR1BqEwyKFr6wCyejzIjwyC0nkA73TzGllIiPHxbJ3AykYZ4Ak7DFcZj9UNz8AmNbyzkuJTz3j2qJQ==
-  dependencies:
-    esbuild "^0.12.5"
-
 "@sveltejs/kit@next":
   version "1.0.0-next.115"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.115.tgz#d24c5810f86c2efec33cf8dc17d9f65f12104e46"
@@ -2033,6 +2026,11 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+svelte-carousel@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/svelte-carousel/-/svelte-carousel-1.0.7.tgz#baba9e7eaaf18a9bb39ecc3b5956e61622d34c17"
+  integrity sha512-9IxVQmMpnNO+pW6Eq0+UYnp3QRWAekx6KiNc6ayepu8CWE4HAkmZHs1ULt361rAFNc5QnpGGEAQquJm8a77hVA==
 
 svelte-check@^2.0.0:
   version "2.1.0"

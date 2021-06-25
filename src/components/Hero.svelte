@@ -26,7 +26,7 @@
 <!--    </button>-->
   </div>
   <div class='w-full lg:w-1/2 lg:py-6 text-center'>
-    <!--Add your product image here-->
+    <!--Add your product hero here-->
     <img
       src='headshot-profile.png'
       class='rounded-full object-cover h-48 w-48 sm:h-56 sm:w-56 mx-auto'>

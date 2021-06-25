@@ -4,7 +4,7 @@
   export let post
   export let index
   const {
-    image = `https://loremflickr.com/640/360?${index}`,
+    hero = `https://loremflickr.com/640/360?${index}`,
     slug,
     title,
     html,
@@ -37,7 +37,7 @@
         <div>
         <img
             class='relative object-cover lazy rounded-tr-md'
-            src={image}
+            src={hero}
             alt={title} />
         </div>
         <!--CONTENT-->

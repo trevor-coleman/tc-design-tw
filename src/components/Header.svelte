@@ -2,7 +2,7 @@
   export let tw;
 
 </script>
-<div class='h-12 mb-4'>
+<div class='h-12'>
 <header
   class='fixed w-full z-10 top-0 h-12'>
   <!--Nav-->

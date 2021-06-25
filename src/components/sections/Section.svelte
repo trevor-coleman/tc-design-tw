@@ -75,9 +75,10 @@ function offsetAnchor(e) {
     </svg>
   {/if}
   <div
-    style='height: {Math.round(Math.abs(0.3 * topSlope))}vh;'></div>
+    style='height:
+{Math.round(Math.abs(0.3 * topSlope))}vh;'></div>
   <div
-    class='relative px-12 top-0 left-0 mx-auto flex flex-col sm:-mt-4'>
+    class='relative px-12 top-0 left-0 mx-auto flex flex-col sm:-mt-4 {topSlope === 0 ? "pt-5":""}'>
     <!--    TITLE    -->
     <div
       class='text-2xl font-bold {topSlope > 0 ? "sm:text-right": "" } sm:pr-2'>
@@ -85,20 +86,21 @@ function offsetAnchor(e) {
     </div>
     {#if description}
     <!--    DESCRIPTION    -->
-      <div class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'
-         style='padding-bottom:{Math.abs(1.5 * topSlope)}vh;'>
+      <div class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'>
 
         <div
         class='{topSlope > 0 ? "sm:text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full py-4'>
         {description}
       </div>
-
+      </div>
       <!--   SLOT   -->
-      <slot />
-    </div>
+
+
     {/if}
+    <slot />
   </div>
-  <div class='mt-2' style='height: {Math.abs(bottomSlope)}vh;'></div>
+  <div class='mt-2'
+       style='height: {Math.round(Math.abs(0.5 * bottomSlope))}vh;'></div>
   {#if bottomSlope > 0}
     <svg
       class='absolute bottom-[0vh] w-full'

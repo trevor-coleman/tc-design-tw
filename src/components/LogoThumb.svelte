@@ -5,9 +5,9 @@
 
 <div
   class='max-h-min mx-2 mb-4'><figure
-  class='flex flex-col w-24 h-24 items-center justify-center'>
+  class='flex flex-col w-30 h-30 items-center justify-center'>
   <div
-    class='bg-white rounded-full h-18 w-18 p-2 place-self-center'>
+    class='bg-white rounded-full h-18 w-18 p-2 place-self-center '>
     <img src={src} alt={caption}
        class='place-self-center w-12 h-12 bg-white p-2 object-cover '/>
   </div>

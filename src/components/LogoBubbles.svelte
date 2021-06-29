@@ -9,7 +9,7 @@
 
 
 
-  <div class='w-full flex flex-col items-center'>
+  <div class='w-full flex flex-col items-center pb-8'>
     <div
     class='w-[16rem] sm:w-full mt-2 flex flex-wrap {tilt==="right" ?
     "sm:justify-end":"sm:justify-start"}'>

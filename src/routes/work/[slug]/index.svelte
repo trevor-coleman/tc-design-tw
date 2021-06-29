@@ -13,6 +13,7 @@
 
   import getCategoryValues from '../../../lib/getCategoryValues'
   import Section from '../../../components/sections/Section.svelte'
+  import nonBreakingText from '../../../lib/nonBreakingText'
 
   export let post
 
@@ -25,11 +26,22 @@
 
   let categoryValues = getCategoryValues(category)
 
+  let nonBreakingTitle = nonBreakingText(post.title);
+  let nonBreakingDescription = nonBreakingText(post.description);
+
 </script>
-<div class='{categoryValues.bg} p-8'>
-  <h1 class='text-2xl font-bold'>{post.title}</h1>
-  <p class='text-lg font-thin'>{post.description}</p>
+<div class='block text-sm pt-4 pb-2 px-4 text-[rgba(0,0,0,0.5)]'>
+  <a href='/'>Home</a> /
+  <a href='/work/'>Projects</a> /
+  <span class='font-medium'>Canadian
+                                                         Forces College</span>
 </div>
+<div class='bg-gray-200 w-full h-[2px] mx-4 mb-8' ></div>
+  <Section topSlope={-2} bottomSlope={-2} title={post.title}
+           bgcolor='{categoryValues.color}'
+           description={post.description}>
+  </Section>
+
 <div class='px-12 py-4'>
 <img src={hero} class='object-cover'/>
 </div>
@@ -40,7 +52,7 @@
 
 {#if images}
   <div class='grid grid-cols-1'>
-  {#each images as { url, description } (url)}
+  {#each images as { url, description }, index (url+index)}
     <div
       class='m-4 p-2 border {categoryValues.border}'>
   <img src='{url}' alt={description} class='object-contain'>

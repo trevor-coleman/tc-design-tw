@@ -25,13 +25,6 @@
 <div/>
 <Hero/>
 <Competencies/>
-  <SoftwareDevelopment/>
-  <CollaborativeDesign/>
-  <AdvisingMentoring/>
-
-
-<Footer/>
-
-<style lang="postcss">
-
-</style>
+<SoftwareDevelopment/>
+<CollaborativeDesign/>
+<AdvisingMentoring/>

@@ -100,7 +100,7 @@ function offsetAnchor(e) {
     <slot />
   </div>
   <div class='mt-2'
-       style='height: {Math.round(Math.abs(0.5 * bottomSlope))}vh;'></div>
+       style='height: {Math.round(Math.abs(1 * bottomSlope))}vh;'></div>
   {#if bottomSlope > 0}
     <svg
       class='absolute bottom-[0vh] w-full'

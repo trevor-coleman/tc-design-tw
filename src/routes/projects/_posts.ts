@@ -4,10 +4,10 @@ import marked from 'marked'
 
 const regex = /^(.+?)(\.[^.]*$|$)/
 
-const posts = fs.readdirSync('src/work')
+const posts = fs.readdirSync('src/content/projects')
                 .filter(elem => elem.endsWith('.md') || elem.endsWith('.svx'))
                 .map(postFileName => {
-                  const postContent = fs.readFileSync(`src/work/${postFileName}`,
+                  const postContent = fs.readFileSync(`src/content/projects/${postFileName}`,
                     {
                       encoding: 'utf-8'
                     })

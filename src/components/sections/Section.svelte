@@ -1,11 +1,21 @@
 <script lang='ts'>
+  import { onMount } from 'svelte'
+  import NavLinks from '../utility/NavLinks.svelte'
   import type { PostItColor } from '../../global'
+  import nonBreakingText from '../../lib/nonBreakingText'
+
 
   export let topSlope: number
   export let bottomSlope: number
   export let bgcolor: PostItColor
   export let title: string
   export let description: string
+  export let footer: boolean | undefined
+  export let header: boolean | undefined
+  export let slug:string|undefined;
+
+  let nonBreakingTitle = nonBreakingText(title)
+  let nonBreakingDescription = nonBreakingText(description)
 
   topSlope = topSlope ?? 10
   bottomSlope = bottomSlope ?? 10
@@ -14,6 +24,7 @@
   switch (bgcolor) {
     case 'blue':
       colorClass = 'bg-postitblue'
+
       break
     case 'yellow':
       colorClass = 'bg-postityellow'
@@ -29,14 +40,26 @@
       break
   }
 
-function offsetAnchor(e) {
-  console.log(e, location)
-  if (e.currentTarget.location.hash.length !== 0) {
-  window.scrollTo(window.scrollX, window.scrollY - 75);
-}
-}
+  function offsetAnchor(e) {
+    console.log("ANCHOR", e, location)
+    if (e.currentTarget.location.hash.length !== 0) {
+      window.scrollTo(window.scrollX, window.scrollY + 20)
+    }
+  }
 
-  console.log("--->", topSlope, bottomSlope);
+  onMount(() => {
+    console.log(window.location.hash.length);
+    if (slug && window.location.hash.length > 0 && window.location.hash ===
+        slug) {
+      console.log("scroll to -75")
+      window.scrollTo(window.scrollX, window.scrollY - 75)
+    }
+    else {
+      console.log("scroll to zero")
+      window.scrollTo(0, 0);
+    }
+  });
+
 
 </script>
 
@@ -76,27 +99,36 @@ function offsetAnchor(e) {
   {/if}
   <div
     style='height:
-{Math.round(Math.abs(0.3 * topSlope))}vh;'></div>
+{Math.round(Math.abs(1 * topSlope))}vh;'></div>
+  {#if footer}
+    <nav
+    class='flex flex-row justify-start w-full gap-4 mx-8 '>
+    <NavLinks/>
+  </nav>
+    <div class='ml-8 my-4 w-2/4 h-[1px] bg-[rgba(123,123,123,0.5)]'></div>
+  {/if}
   <div
-    class='relative px-12 top-0 left-0 mx-auto flex flex-col sm:-mt-4 {topSlope === 0 ? "pt-5":""}'>
+    class='relative px-8 top-0 left-0 mx-auto flex flex-col sm:-mt-4 {topSlope === 0 ? "pt-5":""}'>
     <!--    TITLE    -->
-    <div
-      class='text-2xl font-bold {topSlope > 0 ? "sm:text-right": "" } sm:pr-2'>
-      {title}
-    </div>
+    {#if title}<h2
+      class=' {header ? "text-4xl font-bold":"text-2xl font-bold"} {topSlope
+      > 0 ?
+      "sm:text-right": ""
+       } sm:pr-2'>
+      {@html nonBreakingTitle}
+    </h2>
+    {/if}
     {#if description}
     <!--    DESCRIPTION    -->
-      <div class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'>
-
+      <div
+        class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'>
         <div
         class='{topSlope > 0 ? "sm:text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full py-4'>
-        {description}
+        {@html nonBreakingDescription}
       </div>
       </div>
-      <!--   SLOT   -->
-
-
     {/if}
+    <!--   SLOT   -->
     <slot />
   </div>
   <div class='mt-2'

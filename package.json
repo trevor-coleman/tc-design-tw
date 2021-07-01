@@ -48,6 +48,7 @@
     "@types/marked": "^2.0.3",
     "front-matter": "^4.0.2",
     "marked": "^2.1.1",
-    "svelte-carousel": "^1.0.7"
+    "svelte-carousel": "^1.0.7",
+    "tailwindcss-pseudo": "^1.0.3"
   }
 }

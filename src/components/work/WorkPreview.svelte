@@ -13,7 +13,7 @@
     tags = []
   } = post
 
-  let url = `/work/${slug}`
+  let url = `/projects/${slug}`
 
   const categoryValues = getCategoryValues(category)
 
@@ -52,16 +52,16 @@
             class='text-sm font-light w-[90%]'>{@html
             post.description ?? ""}</p>
         </div>
-        <!-- TAGS  -->
-        <div
-          class='flex flex-row justify-end items-center flex-wrap max-h-min pb-2 pl-4'>
-          {#each tags as tag}
-            <div
-              class='text-xs m-1 py-1 px-2 {categoryValues.bg} rounded-md'>
-              #{tag}
-            </div>
-          {/each}
-        </div>
+<!--        &lt;!&ndash; TAGS  &ndash;&gt;-->
+<!--        <div-->
+<!--          class='flex flex-row justify-end items-center flex-wrap max-h-min pb-2 pl-4'>-->
+<!--          {#each tags as tag}-->
+<!--            <div-->
+<!--              class='text-xs m-1 py-1 px-2 {categoryValues.bg} rounded-md'>-->
+<!--              #{tag}-->
+<!--            </div>-->
+<!--          {/each}-->
+<!--        </div>-->
       </div>
       </div>
     </div>

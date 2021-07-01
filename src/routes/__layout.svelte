@@ -17,7 +17,8 @@
 
 <Head/>
 <Header />
-<main class='container min-w-min'>
-  <slot />
+<main
+  class='container min-w-min'>
+    <slot />
 </main>
-<Footer/>
+<Footer />

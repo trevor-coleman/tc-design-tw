@@ -22,9 +22,19 @@ module.exports = {
     },
     extend: {
       typography: {
+        lg: {
+          css: {
+            a: {
+              textDecoration: "underline"
+            }
+          }
+        },
         DEFAULT: {
           css: {
             lineHeight: '1.28rem',
+            a: {
+              textDecoration: "underline"
+            },
             h1: {
               fontWeight: "500"
             },
@@ -115,6 +125,9 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    require('tailwindcss-pseudo')({
+      empty: true, // defaults to true
+    }),
   ],
 
 };

@@ -2,8 +2,6 @@
   export let icon:string;
   export let alt:string;
   export let href:string;
-
-  console.log(href)
 </script>
 
 <a href={href}

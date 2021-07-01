@@ -3,7 +3,7 @@
                                fetch,
                                page
                              }) {
-    const res = await fetch(`/work.json`)
+    const res = await fetch(`/projects.json`)
     console.log(res)
     return {
       props: {
@@ -15,22 +15,23 @@
 
 <script>
   import WorkPreview from '../../components/work/WorkPreview.svelte'
+  import PageHeader from '../../components/PageHeader.svelte'
 
   export let posts
 </script>
 
-<div class='flex flex-col'>
-    <div class='px-4'><h1 class='text-4xl font-medium'>
-      Projects
-    </h1>
-    <p class='text-disabled text-sm'>Tap to see more information</p>
-    </div>
+  <PageHeader
+    color='blue'
+    bg='bg-postitblue'
+    title={'Projects'}
+    description={"Tap for more information"}
+    large
+  />
   <div
-    class='mx-4 grid-cols-1 gap-4  '>
+    class='mx-8 grid-cols-1 gap-4  '>
 
     {#each posts as post, index}
       <WorkPreview post={post} index={index}/>
     {/each}
 
   </div>
-</div>

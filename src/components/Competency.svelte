@@ -26,7 +26,6 @@
     default:
       break
   }
-  console.log(colorClass)
 
 </script>
 <div

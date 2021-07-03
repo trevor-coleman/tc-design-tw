@@ -9,8 +9,8 @@
   export let large;
 
 </script>
-<div class='{bg} -mt-4 pt-8 px-4 inline-block w-full'>
-  <div class='px-4'>
+<div class='{bg} -mt-4 pt-8 inline-block w-full'>
+  <div class='px-8'>
     <Breadcrumbs />
   </div>
 <Section

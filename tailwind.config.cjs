@@ -22,7 +22,7 @@ module.exports = {
     },
     extend: {
       typography: {
-        lg: {
+        'lg': {
           css: {
             a: {
               textDecoration: "underline"
@@ -31,9 +31,9 @@ module.exports = {
         },
         DEFAULT: {
           css: {
-            lineHeight: '1.28rem',
             a: {
-              textDecoration: "underline"
+              textDecoration: "underline",
+              fontWeight: "500",
             },
             h1: {
               fontWeight: "500"

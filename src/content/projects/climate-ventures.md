@@ -7,10 +7,9 @@ tags:
     - Advising
     - Fundraising
     - Startups
-hero: "/CV_Logo_3.png"
+hero: "/2020Cohort_2060x1159-1420x799.jpeg"
 images :
-    - {url: '/CV_Logo_3.png', description: "Climate Ventures Logo"}
-    - {url: '/2020Cohort_2060x1159-1420x799.jpeg', description: "EarthTech 2020 Cohort"}
+    - {src: '/CV_Logo_3.png', alt: "Climate Ventures Logo"}
 ---
 
 [Earth Tech](https://climateventures.org/earthtech/) is a six-month accelerator 

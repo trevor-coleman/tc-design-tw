@@ -10,9 +10,9 @@ description: "Teaching human-centered collaborative design to military leaders."
 category: design
 hero: "/muse-headband.jpeg"
 images: 
-    - {url: '/muse-headband.jpeg', description: "Muse Headband"}
-    - {url: '/muse-headband.jpeg', description: "Muse Headband"}
-    - {url: '/muse-headband.jpeg', description: "Muse Headband"}
+    - {src: '/2020Cohort_2060x1159-1420x799.jpeg'}
+    - {src: '/muse-headband.jpeg'}
+    - {src: '/muse-headband.jpeg'}
 ---
 
 Each year I facilitate a design exercise for a syndicate of  graduating students

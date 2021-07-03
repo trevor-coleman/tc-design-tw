@@ -10,12 +10,11 @@
 </script>
 
 <script>
-
+  import { Images } from 'svelte-images'
   import getCategoryValues from '../../../lib/getCategoryValues'
-  import Section from '../../../components/sections/Section.svelte'
   import nonBreakingText from '../../../lib/nonBreakingText'
-  import Breadcrumbs from '../../../components/utility/Breadcrumbs.svelte'
   import PageHeader from '../../../components/PageHeader.svelte'
+  import YouTubeEmbed from '../../../components/YouTubeEmbed.svelte'
 
   export let post
 
@@ -23,7 +22,8 @@
     category,
     hero,
     images,
-    tags
+    tags,
+    video
   } = post
 
   let categoryValues = getCategoryValues(category)
@@ -31,26 +31,37 @@
   let nonBreakingTitle = nonBreakingText(post.title)
   let nonBreakingDescription = nonBreakingText(post.description)
 
+
 </script>
   <PageHeader color={categoryValues.color} bg={categoryValues.bg}
               title={post.title} description={post.description}/>
 
+{#if !video}
 <div class='px-12 py-4'>
 <img src={hero} class='object-cover'/>
 </div>
+{/if}
+{#if video}
+  <div class='mx-4 mt-4 mb-8'>
+  <YouTubeEmbed video='{video}' />
+  </div>
+{/if}
 
-<div class='px-8 prose-lg'>
+<div class='px-8 prose'>
 {@html post.html}
 </div>
 
+
 {#if images}
-  <div class='mx-auto my-8 w-2/4 h-[1px] bg-[rgba(123,123,123,0.5)]'></div>
-  <div class='grid grid-cols-1'>
-  {#each images as { url, description }, index (url+index)}
-    <div
-      class='m-4 p-2 shadow-sm {categoryValues.border} border-[12px] ='>
-  <img src='{url}' alt={description} class='object-contain'>
-      </div>
+  <div class='grid grid-cols-1 pt-4'>
+  {#each images as { src, alt }, index (src+index)}
+    <figure
+      class='m-2 p-2'>
+  <img src='{src}' alt={alt}
+       class='object-contain border {categoryValues.border}'>
+      <figcaption
+        class='text-xs text-gray-500 py-2'>{alt}</figcaption>
+      </figure>
   {/each}
   </div>
   {/if}

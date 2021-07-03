@@ -9,6 +9,7 @@
     title='Get In Touch'
     description="I'd love to hear from you!"
     bottomSlope={0}
+    topSlope={5}
     footer>
     <div class='flex flex-row w-full justify-start'>
       <SocialButtons />

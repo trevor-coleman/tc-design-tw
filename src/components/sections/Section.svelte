@@ -68,7 +68,7 @@
 />
 
 
-<section
+<div
   class='{colorClass} relative mt-0 max-w-[100%] mx-auto'
   style='padding-top: {Math.abs(topSlope)}vh'>
   {#if topSlope > 0}
@@ -121,9 +121,9 @@
     {#if description}
     <!--    DESCRIPTION    -->
       <div
-        class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""}'>
+        class='w-full flex flex-col {topSlope > 0 ? "sm:items-end":""} py-4'>
         <div
-        class='{topSlope > 0 ? "sm:text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full py-4'>
+        class='{topSlope > 0 ? "sm:text-right":""} max-w-[30ch] xs:max-w-[50ch] md:max-w-full lg:w-full'>
         {@html nonBreakingDescription}
       </div>
       </div>
@@ -157,9 +157,7 @@
         points='0,100 100,0 100,100' />
     </svg>
   {/if}
-
-
-</section>
+</div>
 
 <style>
 
